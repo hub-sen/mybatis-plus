@@ -1,11 +1,10 @@
-package org.mp.start.dao;
+package org.mp.high.dao;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
-import org.mp.start.entity.User;
+import org.mp.high.entity.User;
 import org.springframework.lang.NonNull;
 
 import java.util.List;
@@ -14,13 +13,10 @@ import java.util.List;
  * <pre>
  * Description
  * @author shishi
- * 2020/1/20 16:20
+ * 2020/1/22 15:31
  * </pre>
  */
 public interface UserMapper extends BaseMapper<User> {
 
-	List<User> selectAll(@Param(Constants.WRAPPER) @NonNull Wrapper<User> wrapper);
-
-	Page<User> selectMyPage(@NonNull Page<User> page, @Param(Constants.WRAPPER) @NonNull Wrapper<User> wrapper);
-
+	List<User> mySelect(@Param(Constants.WRAPPER) @NonNull Wrapper<User> wrapper);
 }
