@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.96.170.5:3306/mp?useSSl=true&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+logging:
+  level:
+    root: warn
+    org.mp.high.dao: trace
+  pattern:
+    console: '%p%m%n'
+
+mybatis-plus:
+  type-aliases-package: org.mp.high.entity
